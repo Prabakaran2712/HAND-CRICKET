@@ -177,4 +177,3 @@ if(innings==1):
                         break
                    else:
                        print('enter a number between 1 and 6')
-#****************************END OF PROGRAM*******************************************
