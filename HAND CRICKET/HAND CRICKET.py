@@ -3,8 +3,15 @@ from random import choice,randint
 toss=choice(['heads','tails'])
 #ININTIALISING INNINGS AS 1
 innings=1
-your_toss=input("enter heads or tails")
-your_toss=your_toss.lower()
+#CHECKING TOSS INPUT VALUE
+while(True):
+    your_toss=input("enter heads or tails")
+    if(your_toss.lower() in ['heads','tails']):
+        your_toss=your_toss.lower()
+        break
+    else:
+        print("you only have a head and tail in a coin")
+        continue
 #Beginning of innings
 if(innings==1):
    if(your_toss==toss):
@@ -57,6 +64,7 @@ if(innings==1):
                  print("you bowled {}".format(user_input))
                  if (computer_score > player_score):
                   print("the computer wins")
+                  print("computer score",computer_score)
                   break
              else:
                  print('enter a number between 1 and 6')
@@ -106,6 +114,7 @@ if(innings==1):
                          print("you batted {}".format(user_input))
                          if (player_score > computer_score):
                           print('you win')
+                          print('your score',player_score)
                           break
                      else:
                          print('enter number between 1 and 6')
@@ -158,6 +167,7 @@ if(innings==1):
                            print("you batted {}".format(user_input))
                            if (player_score > computer_score):
                             print('you win')
+                            print('your score',player_score)
                             break
                        else:
                           print('enter a nummber between 1 and 6')
@@ -207,6 +217,7 @@ if(innings==1):
                        print("the computer batted {}".format(computer_input))
                        if (computer_score > player_score):
                         print('computer wins')
+                        print('computer score',computer_score)
                         break
                    else:
                        print('enter a number between 1 and 6')
