@@ -1,9 +1,10 @@
-from random import *
+from random import choice,randint
 # TOSS
 toss=choice(['heads','tails'])
 #ININTIALISING INNINGS AS 1
 innings=1
 your_toss=input("enter heads or tails")
+your_toss=your_toss.lower()
 #Beginning of innings
 if(innings==1):
    if(your_toss==toss):
@@ -16,7 +17,11 @@ if(innings==1):
          player_score = 0
          while (True):
              computer_input = randint(1, 6)
-             user_input = int(input("choose a value between 1 and 6"))
+             try:
+                 user_input = int(input("enter a number between 1 and 6"))
+             except ValueError:
+                 print("your input should only be integers")
+                 continue
              if(1<=user_input<=6):
                if (computer_input == user_input):
                  print("you are out")
@@ -35,7 +40,11 @@ if(innings==1):
           computer_score = 0
           while (True):
              computer_input = randint(1, 6)
-             user_input = int(input("choose a value between 1 and 6"))
+             try:
+                 user_input = int(input("enter a number between 1 and 6"))
+             except ValueError:
+                 print("your input should only be integers")
+                 continue
              if (1 <= user_input <= 6):
                if (computer_input == user_input):
                  print("computer is out")
@@ -57,7 +66,11 @@ if(innings==1):
          print('you bowl first')
          while (True):
              computer_input = randint(1, 6)
-             user_input = int(input("choose a number between 1 and 6"))
+             try:
+                 user_input = int(input("enter a number between 1 and 6"))
+             except ValueError:
+                 print("your input should only be integers")
+                 continue
              if (1 <= user_input <= 6):
                if (computer_input == user_input):
                  print("the computer is out")
@@ -76,7 +89,11 @@ if(innings==1):
                  player_score = 0
                  while (True):
                      computer_input = randint(1, 6)
-                     user_input = int(input("choose a value between 1 and 6"))
+                     try:
+                         user_input = int(input("enter a number between 1 and 6"))
+                     except ValueError:
+                         print("your input should only be integers")
+                         continue
                      if (1 <= user_input <= 6):
                        if (computer_input == user_input):
                          print("you are out")
@@ -101,7 +118,11 @@ if(innings==1):
                computer_score = 0
                while (True):
                    computer_input = randint(1, 6)
-                   user_input = int(input("choose a value between 1 and 6"))
+                   try:
+                       user_input = int(input("enter a number between 1 and 6"))
+                   except ValueError:
+                       print("your input should only be integers")
+                       continue
                    if (1 <= user_input <= 6):
                      if (computer_input == user_input):
                        print("computer is out")
@@ -120,7 +141,11 @@ if(innings==1):
                    player_score = 0
                    while (True):
                        computer_input = randint(1, 6)
-                       user_input = int(input("choose a value between 1 and 6"))
+                       try:
+                           user_input = int(input("enter a number between 1 and 6"))
+                       except ValueError:
+                           print("your input should only be integers")
+                           continue
                        if (1 <= user_input <= 6):
                          if (computer_input == user_input):
                            print("you are out")
@@ -142,7 +167,11 @@ if(innings==1):
            player_score = 0
            while (True):
                computer_input = randint(1, 6)
-               user_input = int(input("choose a value between 1 and 6"))
+               try:
+                   user_input = int(input("enter a number between 1 and 6"))
+               except ValueError:
+                   print("your input should only be integers")
+                   continue
                if (1 <= user_input <= 6):
                  if (computer_input == user_input):
                    print("you are out")
@@ -161,7 +190,11 @@ if(innings==1):
                computer_score = 0
                while (True):
                    computer_input = randint(1, 6)
-                   user_input = int(input("choose a number between 1 and 6"))
+                   try:
+                       user_input = int(input("enter a number between 1 and 6"))
+                   except ValueError:
+                       print("your input should only be integers")
+                       continue
                    if (1 <= user_input <= 6):
                      if (computer_input == user_input):
                        print("the computer is out")
