@@ -3,17 +3,17 @@ from random import choice,randint
 toss=choice(['heads','tails'])
 #ININTIALISING INNINGS AS 1
 innings=1
-#CHECKING TOSS INPUT VALUE
-while(True):
-    your_toss=input("enter heads or tails")
-    if(your_toss.lower() in ['heads','tails']):
-        your_toss=your_toss.lower()
-        break
-    else:
-        print("you only have a head and tail in a coin")
-        continue
-#Beginning of innings
+#Beginning of innings1
 if(innings==1):
+    #toss check
+   while (True):
+        your_toss = input("enter heads or tails")
+        if (your_toss.lower() in ['heads', 'tails']):
+            your_toss = your_toss.lower()
+            break
+        else:
+            print("you only have a head and tail in a coin")
+            continue
    if(your_toss==toss):
      print('you have won the toss')
      choice_of=input('choose to bat or bowl')
